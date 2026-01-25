@@ -9,5 +9,5 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.utility.noice-nvim" },
 }

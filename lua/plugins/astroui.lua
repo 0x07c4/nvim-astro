@@ -14,5 +14,9 @@ return {
     colorscheme = "gruvbox",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     -- Icons can be configured throughout the interface
+    ui = {
+      notifications = true,
+      cmdline = true,
+    },
   },
 }
