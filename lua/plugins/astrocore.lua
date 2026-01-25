@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -77,8 +77,25 @@ return {
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
+        -- mappings search and find files
+        ["<leader><leader>"] = {
+          function() require("snacks").picker.files() end,
+          desc = "Find files",
+        },
+        ["<leader>/"] = {
+          function() require("snacks").picker.grep() end,
+          desc = "Grep",
+        },
+
+        -- remapping comment current line
+        ["<C-_>"] = { "gcc", remap = true, desc = "Toggle comment" },
+        ["<C-/>"] = { "gcc", remap = true, desc = "Toggle comment" },
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      v = {
+        ["<C-_>"] = { "gc", remap = true, desc = "Toggle comment" },
+        ["<C-/>"] = { "gc", remap = true, desc = "Toggle comment" },
       },
     },
   },
