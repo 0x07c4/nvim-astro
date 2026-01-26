@@ -90,12 +90,20 @@ return {
         -- remapping comment current line
         ["<C-_>"] = { "gcc", remap = true, desc = "Toggle comment" },
         ["<C-/>"] = { "gcc", remap = true, desc = "Toggle comment" },
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
+
+        -- vertical terminal
+        ["<C-\\>"] = { "<Cmd>ToggleTerm size=80 direction=vertical<CR>", desc = "ToggleTerm vertical split" },
       },
       v = {
         ["<C-_>"] = { "gc", remap = true, desc = "Toggle comment" },
         ["<C-/>"] = { "gc", remap = true, desc = "Toggle comment" },
+      },
+      t = {
+        -- leave vertical terminal
+        ["<C-\\>"] = {
+          [[<C-\><C-n><Cmd>execute v:count . "ToggleTerm size=80 direction=vertical"<CR>]],
+          desc = "Leave vertical terminal",
+        },
       },
     },
   },
