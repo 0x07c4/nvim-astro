@@ -82,10 +82,6 @@ return {
           function() require("snacks").picker.files() end,
           desc = "Find files",
         },
-        ["<leader>/"] = {
-          function() require("snacks").picker.grep() end,
-          desc = "Grep",
-        },
 
         -- remapping comment current line
         ["<C-_>"] = { "gcc", remap = true, desc = "Toggle comment" },
