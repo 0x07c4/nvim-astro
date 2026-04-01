@@ -83,6 +83,20 @@ return {
           desc = "Find files",
         },
 
+        ["<leader>y"] = { desc = "Yank" },
+        ["<leader>yy"] = {
+          function() require("utils.filepath").select(0) end,
+          desc = "Yank file path",
+        },
+        ["<leader>yr"] = {
+          function() require("utils.filepath").copy("relative", 0) end,
+          desc = "Yank relative path",
+        },
+        ["<leader>ya"] = {
+          function() require("utils.filepath").copy("absolute", 0) end,
+          desc = "Yank absolute path",
+        },
+
         -- remapping comment current line
         ["<C-_>"] = { "gcc", remap = true, desc = "Toggle comment" },
         ["<C-/>"] = { "gcc", remap = true, desc = "Toggle comment" },

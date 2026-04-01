@@ -12,5 +12,5 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.search.nvim-spectre" },
-  { import = "astrocommunity.editing-support.codecompanion-nvim" },
+  { import = "astrocommunity.ai.codecompanion-nvim" },
 }
